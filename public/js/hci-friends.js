@@ -4,11 +4,12 @@
 $(document).ready(function() {
 	initializePage();
 
-	$(".person").click(function() { 
+	$(".friend a").click(function(event) { 
 
-		var name = $("this").text();
-		var anagram = anagrammedName(name);
-		$("this").text(anagram);
+		event.preventDefault();
+		var name = $(this).text();
+		$(this).text(anagrammedName(name));
+		//$('this').text(anagram);
 	})
 })
 
